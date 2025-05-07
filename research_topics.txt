@@ -1,0 +1,27 @@
+composition
+patterns
+shaders
+state machines
+custom resources
+saving / loading the game
+complex input
+animation 
+AI
+user interfaces
+
+=============
+DESIGN
+=============
+
+
+
+=============
+CONCEPTS
+=============
+
+
+
+=============
+SYSTEMS
+=============
+inventory
