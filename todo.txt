@@ -1,0 +1,7 @@
+0-core
+1. a logger for easy logging
+2. a cheat console for a testing games. calls funcs, etc
+3. fps & and other debug info
+4. extremely simple classes like Player that I can stub off of in future projects and implement in different ways
+	and since its modular I should be able to export and easily replace the player 
+5. an extremely simple playformer or something that works with these simple classes. 

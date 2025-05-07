@@ -1,27 +1,30 @@
+=============
+DESIGN / CORE
+=============
 composition
-patterns
-shaders
+new foldercustom resources
+software patterns
 state machines
-custom resources
-saving / loading the game
-complex input
-animation 
-AI
-user interfaces
 
 =============
-DESIGN
+VISUALS
 =============
-
-
-
-=============
-CONCEPTS
-=============
-
-
+shaders
+animations
+particle systems
+user interface
+	- volume sliders
+	- custom cursors
+	- scene transitions
 
 =============
 SYSTEMS
 =============
 inventory
+saving & loading
+scene constructors
+
+=============
+OTHER
+=============
+input
