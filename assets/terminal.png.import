@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csitwksaivabr"
-path="res://.godot/imported/gruvbox-terminal.png-79a71b1a1407b19a731e017ec0517a9f.ctex"
+uid="uid://d16ylivu06vo7"
+path="res://.godot/imported/terminal.png-6d07dc7c8c599821269f90d5e542fee2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gruvbox-terminal.png"
-dest_files=["res://.godot/imported/gruvbox-terminal.png-79a71b1a1407b19a731e017ec0517a9f.ctex"]
+source_file="res://assets/terminal.png"
+dest_files=["res://.godot/imported/terminal.png-6d07dc7c8c599821269f90d5e542fee2.ctex"]
 
 [params]
 
