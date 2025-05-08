@@ -5,16 +5,25 @@ extends Node
 # and then use that and it should make this terminal very reusable depending on the 
 # game i am writing.
 # 2. auto command completion
-# 3. command history so I can uparrow and get my latest command 
-# 4. tilde to open the console
 # 5. once I complete 1, i want to make a default commands resource kinda thing.
-# printing, clearing,  exiting, 
-# 6. also alises for certian commands like exit and close
+# clear history, exit, etc
+# this entire console is pretty coupled and poorly coded, needs to be redone. 
+# abstract portions away into individual pieces. this script itself is doing too much
+# take power away from the UI
+# this portion shouldnt interact with the UI but output signals or so
+# make this not a singleton, just add it to the main scene
+# extend this so I can add command buttons as well. ie buttons that can be defined 
+# that just take what would be typed in here and then execute it, can use the same command in the backend
+# also when autocomplete is being implemented, when the command you want is determined, make it
+# so that the args it wants are placed up above the text input or so
 
 var console_scene: PackedScene = preload("res://0-core/dev_console/console_ui.tscn")
 var console_ui: Control
+var input_field: LineEdit
 var is_visible: bool = false
+var toggle_key: int = KEY_QUOTELEFT  # this is `
 
+var command_history: CommandHistory = CommandHistory.new()
 var commands: Dictionary = {} # registered commands
 
 func _ready() -> void:
@@ -23,6 +32,7 @@ func _ready() -> void:
 	console_ui = console_scene.instantiate()
 	console_ui.visible = false
 	add_child(console_ui)
+	input_field = console_ui.get_node("InputField") as LineEdit
 	
 	console_ui.command_entered.connect(_on_command_entered)
 	console_ui.typing_in_terminal.connect(_on_typing_in_terminal)
@@ -30,6 +40,19 @@ func _ready() -> void:
 	# add some build in commands
 	register_command("help", _cmd_help, "Show available commands")
 	register_command("exit", _cmd_exit, "Hide the console")
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey and event.is_pressed() and not event.is_echo():
+		if event.keycode == toggle_key:
+			toggle_visibility()
+			get_viewport().set_input_as_handled() # prevent further processing
+		elif is_visible:
+			if event.keycode == KEY_UP:
+				input_field.text = command_history.get_previous_command()
+				input_field.caret_column = input_field.text.length()
+			elif event.keycode == KEY_DOWN:
+				input_field.text = command_history.get_next_command()
+				input_field.caret_column = input_field.text.length()
 
 func toggle_visibility() -> void:
 	is_visible = !is_visible
@@ -40,7 +63,6 @@ func toggle_visibility() -> void:
 
 func _on_command_entered(command: String, args: Array) -> void:
 	print("Command received: %s with args: %s" % [command, args])
-	
 	if commands.has(command):
 		var cmd_info = commands[command]
 		

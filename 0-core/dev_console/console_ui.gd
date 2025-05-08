@@ -50,11 +50,12 @@ func _apply_styling() -> void:
 		
 		self.mouse_filter = Control.MOUSE_FILTER_IGNORE  # clicks pass through to children
 	
-	
 func _on_input_field_text_submitted(new_text: String) -> void:
 	if new_text.strip_edges().is_empty():
 		return
-		
+	
+	DevConsole.command_history.add_to_history(new_text)
+	DevConsole.command_history.reset_position()
 	print(new_text)
 	
 	var temp = new_text.split(" ")

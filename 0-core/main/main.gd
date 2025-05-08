@@ -4,7 +4,8 @@ extends Node
 
 func _ready():
 	add_child(tester)
-	#test_example()
+	
+	#call_deferred("test_example")
 	
 func test_example():
 	var example = func():
