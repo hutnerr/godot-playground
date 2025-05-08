@@ -15,6 +15,16 @@ run/main_scene="uid://ro3rwaj1mvfn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://assets/icon.svg"
 
+[autoload]
+
+ColorManager="*res://0-core/singletons/color_themer.gd"
+FontManager="*res://0-core/singletons/font_themer.gd"
+SystemInfo="*res://0-core/singletons/system_info.gd"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/script-ide/plugin.cfg")
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

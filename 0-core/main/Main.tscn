@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ro3rwaj1mvfn"]
+
+[ext_resource type="Script" uid="uid://u1tddvbegfst" path="res://0-core/main/main.gd" id="1_20r64"]
+[ext_resource type="PackedScene" uid="uid://dcou2vpu7ql66" path="res://0-core/debug_window/DebugWindow.tscn" id="2_rmlk6"]
+[ext_resource type="Texture2D" uid="uid://csitwksaivabr" path="res://assets/gruvbox-terminal.png" id="3_toing"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_20r64")
+
+[node name="MainBG" type="ColorRect" parent="."]
+offset_left = -15.0
+offset_top = -10.0
+offset_right = 1165.0
+offset_bottom = 660.0
+color = Color(0.156863, 0.156863, 0.156863, 1)
+
+[node name="DebugWindow" parent="." instance=ExtResource("2_rmlk6")]
+
+[node name="Gruvbox-terminal" type="Sprite2D" parent="."]
+position = Vector2(1119, 53)
+scale = Vector2(3.32, 3.32)
+texture = ExtResource("3_toing")

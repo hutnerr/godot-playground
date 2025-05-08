@@ -4,7 +4,7 @@ extends Node
 
 func _ready():
 	add_child(tester)
-	test_example()
+	#test_example()
 	
 func test_example():
 	var example = func():
