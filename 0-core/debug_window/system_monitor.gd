@@ -1,8 +1,10 @@
 extends Node
 
-class_name system_info
+#class_name SystemMonitor # this is the name of the singleton
 
-# singleton known as SystemInfo
+"""
+This script gets system information and outputs it as signals. Active as a singleton. 
+"""
 
 signal fps_updated(current)
 signal memory_updated(static_memory)
@@ -13,11 +15,6 @@ var update_interval: float = 0.5
 var time_passed: float = 0.0
 
 var fps_current: float = 0
-
-var sys_info: Dictionary = {}
-
-func _ready():
-	sys_info = collect_system_info()
 
 func _process(delta):	
 	# get fps on every call, get other stats based on interval 
@@ -42,15 +39,3 @@ func update_stats() -> void:
 	
 	var draw_calls = Performance.get_monitor(Performance.RENDER_TOTAL_DRAW_CALLS_IN_FRAME)
 	emit_signal("render_stats_updated", draw_calls)
-
-func collect_system_info() -> Dictionary:
-	var info = {}
-	info["os_name"] = OS.get_name()
-	info["processor_count"] = OS.get_processor_count()
-	info["video_driver"] = DisplayServer.get_name()
-	info["godot_version"] = Engine.get_version_info()["string"]
-	info["screen_size"] = DisplayServer.window_get_size()
-	return info
-	
-func get_system_info() -> Dictionary:
-	return sys_info

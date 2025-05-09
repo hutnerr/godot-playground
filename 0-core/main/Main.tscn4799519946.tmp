@@ -23,5 +23,3 @@ grow_horizontal = 1
 grow_vertical = 1
 
 [node name="Terminal" parent="." instance=ExtResource("3_g7ncl")]
-visible = false
-z_index = 10
