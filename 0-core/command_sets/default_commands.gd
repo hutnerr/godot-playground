@@ -12,12 +12,16 @@ var terminal: DevTerminal
 func _init(term: DevTerminal) -> void:
 	terminal = term
 	
-	add_command("clearhistory", Callable(self, "_clearhistory_command"), "Clear the terminal history", "clearhistory")
+	add_command("clear-history", Callable(self, "_clearhistory_command"), "Clear the terminal history", "clearhistory")
 	add_command("history", Callable(self, "_history_command"), "Show command history", "history [count]")
 	add_command("help", Callable(self, "_help_command"), "Display available commands", "help [command]")
 	add_command("exit", Callable(self, "_exit_command"), "Closes the terminal", "exit")
 	add_command("close", Callable(self, "_exit_command"), "Closes the terminal", "close")
-	add_command("quitgame", Callable(self, "_quit_game_command"), "Quits the game entirely", "quitgame")
+	add_command("quit-game", Callable(self, "_quit_game_command"), "Quits the game entirely", "quitgame")
+	add_command("toggle-debug", Callable(self, "_toggle_debug"), "Toggles the FPS and other info", "toggle-debug")
+
+func _toggle_debug(_args: Array) -> void:
+	SystemMonitor.toggle_collecting_data()
 
 func _quit_game_command(_args: Array) -> void:
 	terminal.get_tree().quit()

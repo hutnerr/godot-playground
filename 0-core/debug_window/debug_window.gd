@@ -18,6 +18,7 @@ func _ready():
 	system_info.connect("memory_updated", Callable(self, "_on_memory_updated"))
 	system_info.connect("object_counts_updated", Callable(self, "_on_object_counts_updated"))
 	system_info.connect("render_stats_updated", Callable(self, "_on_render_stats_updated"))
+	system_info.connect("toggle_collecting", Callable(self, "_on_collecting_toggle"))
 	
 	var labels = [fps_label, memory_label, objects_label, render_label]
 	for l in labels:
@@ -51,3 +52,6 @@ func _on_object_counts_updated(total_objects, total_nodes):
 
 func _on_render_stats_updated(draw_calls):
 	render_label.text = "Draw Calls: %d" % draw_calls
+
+func _on_collecting_toggle(status) -> void:
+	visible = status

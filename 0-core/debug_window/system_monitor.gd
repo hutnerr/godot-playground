@@ -10,13 +10,18 @@ signal fps_updated(current)
 signal memory_updated(static_memory)
 signal object_counts_updated(total_objects, total_nodes)
 signal render_stats_updated(draw_calls)
+signal toggle_collecting(status)
 
 var update_interval: float = 0.5
 var time_passed: float = 0.0
 
 var fps_current: float = 0
+var running: bool = true # init to true
 
-func _process(delta):	
+func _process(delta):
+	if not running:
+		return
+
 	# get fps on every call, get other stats based on interval 
 	track_fps()
 	
@@ -39,6 +44,10 @@ func update_stats() -> void:
 	
 	var draw_calls = Performance.get_monitor(Performance.RENDER_TOTAL_DRAW_CALLS_IN_FRAME)
 	emit_signal("render_stats_updated", draw_calls)
+
+func toggle_collecting_data() -> void:
+	running = !running
+	toggle_collecting.emit(running)
 
 # used by a command set
 func print_fps(_args: Array) -> void:

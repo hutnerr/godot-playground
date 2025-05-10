@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ro3rwaj1mvfn"]
+[gd_scene load_steps=4 format=3 uid="uid://ro3rwaj1mvfn"]
 
 [ext_resource type="Script" uid="uid://u1tddvbegfst" path="res://0-core/main/main.gd" id="1_20r64"]
 [ext_resource type="PackedScene" uid="uid://dcou2vpu7ql66" path="res://0-core/debug_window/DebugWindow.tscn" id="2_rmlk6"]
 [ext_resource type="PackedScene" uid="uid://ci0sl2x860d66" path="res://0-core/terminal/terminal.tscn" id="3_g7ncl"]
-[ext_resource type="Script" uid="uid://c3xkaqhoel402" path="res://0-core/command_sets/example_command_set.gd" id="4_g7ncl"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_20r64")
@@ -26,4 +25,3 @@ grow_vertical = 1
 [node name="Terminal" parent="." instance=ExtResource("3_g7ncl")]
 visible = false
 z_index = 10
-command_suite = ExtResource("4_g7ncl")
