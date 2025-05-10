@@ -39,3 +39,7 @@ func update_stats() -> void:
 	
 	var draw_calls = Performance.get_monitor(Performance.RENDER_TOTAL_DRAW_CALLS_IN_FRAME)
 	emit_signal("render_stats_updated", draw_calls)
+
+# used by a command set
+func print_fps(_args: Array) -> void:
+	print(fps_current)

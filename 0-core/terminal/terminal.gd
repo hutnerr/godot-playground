@@ -59,6 +59,7 @@ func _on_input_line_submitted(text: String) -> void:
 	var args = parts.slice(1) if parts.size() > 1 else []
 	
 	command_history.add(text)
+	command_history.reset_index()
 	command_executer.execute(command, args)
 	
 	input_line.clear()
