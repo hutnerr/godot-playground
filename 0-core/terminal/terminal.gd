@@ -160,7 +160,7 @@ func _on_input_line_gui_input(event: InputEvent) -> void:
 func _input(event: InputEvent) -> void:
 	# on ` toggle visibility
 	if event is InputEventKey and event.pressed and event.keycode == KEY_QUOTELEFT:
-		visible = !visible	
+		visible = !visible
 		if visible:
 			input_line.grab_focus()
 		get_viewport().set_input_as_handled()
@@ -216,4 +216,4 @@ func _apply_styling() -> void:
 		
 		input_line.add_theme_color_override("selection_color", ColorManager.get_tertiary())
 		
-		self.mouse_filter = Control.MOUSE_FILTER_IGNORE  # clicks pass through to children
+		self.mouse_filter = Control.MOUSE_FILTER_IGNORE # clicks pass through to children
