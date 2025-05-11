@@ -41,7 +41,7 @@ func _on_fps_updated(current):
 	elif current < 55:
 		color = Color.YELLOW
 		
-	fps_label.text = "FPS: %d" %current
+	fps_label.text = "FPS: %d" % current
 	fps_label.add_theme_color_override("font_color", color)
 
 func _on_memory_updated(static_mem):
