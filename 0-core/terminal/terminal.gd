@@ -44,7 +44,7 @@ func _ready() -> void:
 
 # this process function ensures we dont have hanging argument hints showing
 # after certain operations
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if !input_line.text.length() > 0:
 		command_parameter.text = ""
 

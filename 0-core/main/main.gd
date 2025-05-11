@@ -6,10 +6,10 @@ This is the code for the main scene. Ideally shouldn't have much, should be more
 
 @onready var tester = PerformanceTester.new()
 
-func _ready():
+func _ready() -> void:
 	add_child(tester)
 	
-func test_example():
+func test_example() -> void:
 	# dont call this from ready cause then it will prevent it from loading
 	var example = func():
 		var arr = []

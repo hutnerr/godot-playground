@@ -18,7 +18,7 @@ var time_passed: float = 0.0
 var fps_current: float = 0
 var running: bool = true # init to true
 
-func _process(delta):
+func _process(delta: float) -> void:
 	if not running:
 		return
 
