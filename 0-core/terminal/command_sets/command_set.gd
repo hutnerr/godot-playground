@@ -2,7 +2,7 @@ extends RefCounted
 class_name CommandSet
 
 """
-base command set. used for modularity in the terminal.
+parent command set. used for modularity in the terminal.
 use add_command in init to define then can be passed to the terminal.
 """
 
