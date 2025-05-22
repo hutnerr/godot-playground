@@ -16,7 +16,7 @@ the primary terminal class.
 
 # the modular command suite to use
 # should be defined by extending a CommandSet
-@export var command_suite: Script
+@export var command_suites: Array[Script] = []
 
 var command_history: CommandHistory
 var command_executer: CommandExecuter
@@ -29,10 +29,11 @@ func _ready() -> void:
 	command_executer.register_command_set(DefaultCommands.new(self))
 	
 	# load inspector provided test suite
-	if command_suite != null:
-		var instance = command_suite.new()
-		command_executer.register_command_set(instance)
-		
+	if command_suites != null:
+		for suite in command_suites:
+			var instance = suite.new()
+			command_executer.register_command_set(instance)
+
 	input_line.text_submitted.connect(_on_input_line_submitted)
 	input_line.text_changed.connect(_on_input_line_text_changed)
 	input_line.gui_input.connect(_on_input_line_gui_input)
