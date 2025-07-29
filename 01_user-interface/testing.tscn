@@ -1,0 +1,89 @@
+[gd_scene load_steps=5 format=3 uid="uid://pqaeylnjf55d"]
+
+[ext_resource type="StyleBox" uid="uid://blbuhk14ppsgl" path="res://01_user-interface/themes/panel-stylebox.tres" id="1_yvpl4"]
+[ext_resource type="Texture2D" uid="uid://ibh3jyjdsnrq" path="res://assets/icon.svg" id="2_rxm2s"]
+[ext_resource type="Texture2D" uid="uid://3nbtsypi1kkj" path="res://assets/two-coins.svg" id="3_bh350"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05mml"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerInfoBox" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 12.0
+offset_right = 344.0
+offset_bottom = 156.0
+theme_override_styles/panel = ExtResource("1_yvpl4")
+
+[node name="AvatarFrame" type="Panel" parent="PlayerInfoBox"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 14.0
+offset_top = -63.0
+offset_right = 141.0
+offset_bottom = 64.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_05mml")
+
+[node name="Avatar" type="TextureRect" parent="PlayerInfoBox/AvatarFrame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.5
+offset_top = -57.5
+offset_right = 56.5
+offset_bottom = 56.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rxm2s")
+expand_mode = 1
+
+[node name="Nickname" type="Label" parent="PlayerInfoBox"]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 8.0
+offset_right = 272.0
+offset_bottom = 38.0
+text = "Nickname"
+
+[node name="CoinBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -279.0
+offset_top = 9.0
+offset_right = -9.0
+offset_bottom = 97.0
+grow_horizontal = 0
+theme_override_styles/panel = ExtResource("1_yvpl4")
+
+[node name="TextureRect" type="TextureRect" parent="CoinBox"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 13.0
+offset_top = -34.0
+offset_right = 84.0
+offset_bottom = 37.0
+grow_vertical = 2
+texture = ExtResource("3_bh350")
+expand_mode = 1

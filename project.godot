@@ -17,9 +17,9 @@ config/icon="res://assets/icon.svg"
 
 [autoload]
 
-ColorManager="*res://0-core/theme_singletons/color_themer.gd"
-FontManager="*res://0-core/theme_singletons/font_themer.gd"
-SystemMonitor="*res://0-core/debug_window/system_monitor.gd"
+ColorManager="*res://00_core/theme_singletons/color_themer.gd"
+FontManager="*res://00_core/theme_singletons/font_themer.gd"
+SystemMonitor="*res://00_core/debug_window/system_monitor.gd"
 
 [editor_plugins]
 

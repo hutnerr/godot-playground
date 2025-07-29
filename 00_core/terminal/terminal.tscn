@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci0sl2x860d66"]
+
+[ext_resource type="Script" uid="uid://b7peot3x3juev" path="res://00_core/terminal/terminal.gd" id="1_n8nr7"]
+
+[node name="Terminal" type="Panel"]
+custom_minimum_size = Vector2(750, 500)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 219.0
+offset_top = 101.0
+offset_right = -208.0
+offset_bottom = -139.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n8nr7")
+
+[node name="InputLine" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.208
+anchor_right = 1.0
+anchor_bottom = 0.366
+grow_horizontal = 2
+grow_vertical = 2
+keep_editing_on_text_submit = true
+metadata/_edit_use_anchors_ = true
+
+[node name="AutoComplete" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -331.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CommandParameters" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 87.0
+grow_horizontal = 2

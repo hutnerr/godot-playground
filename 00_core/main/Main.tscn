@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://ro3rwaj1mvfn"]
+
+[ext_resource type="Script" uid="uid://u1tddvbegfst" path="res://00_core/main/main.gd" id="1_20r64"]
+[ext_resource type="PackedScene" uid="uid://dcou2vpu7ql66" path="res://00_core/debug_window/DebugWindow.tscn" id="2_rmlk6"]
+[ext_resource type="PackedScene" uid="uid://ci0sl2x860d66" path="res://00_core/terminal/terminal.tscn" id="3_g7ncl"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_20r64")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="MainBG" type="ColorRect" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.156863, 0.156863, 0.156863, 1)
+
+[node name="DebugWindow" parent="UI" instance=ExtResource("2_rmlk6")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Terminal" parent="UI" instance=ExtResource("3_g7ncl")]
+z_index = 10
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
