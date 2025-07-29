@@ -15,7 +15,7 @@ func add(command: String) -> void:
 	# don't add empty commands or duplicates
 	if command.strip_edges().is_empty() or (not history.is_empty() and history.back() == command):
 		return
-		
+
 	history.append(command)
 	
 	if history.size() > max_history:
