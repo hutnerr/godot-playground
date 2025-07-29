@@ -1,3 +1,1 @@
-0-core
-1. a logger for easy logging
-2. fix the terminal so it adjusts to different screen sizes
+1. try and create a parallax background component with a svg export 

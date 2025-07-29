@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci0sl2x860d66"]
+
+[ext_resource type="Script" uid="uid://b7peot3x3juev" path="res://01_core/terminal/terminal.gd" id="1_n8nr7"]
+[ext_resource type="FontFile" uid="uid://d35bsyq0nl65h" path="res://99-assets/fonts/JetBrainsMono.ttf" id="2_iq7l5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q22dk"]
+bg_color = Color(0.156863, 0.156863, 0.156863, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.980392, 0.741176, 0.184314, 1)
+corner_radius_top_left = 32
+corner_radius_bottom_right = 32
+
+[node name="Terminal" type="Panel"]
+process_mode = 3
+custom_minimum_size = Vector2(650, 400)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.0
+offset_top = -200.0
+offset_right = 325.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_q22dk")
+script = ExtResource("1_n8nr7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+alignment = 2
+
+[node name="CommandParameters" type="RichTextLabel" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="InputLine" type="LineEdit" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+keep_editing_on_text_submit = true
+metadata/_edit_use_anchors_ = true
+
+[node name="AutoComplete" type="RichTextLabel" parent="HBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Output" type="RichTextLabel" parent="HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_iq7l5")

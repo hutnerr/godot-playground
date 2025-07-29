@@ -1,0 +1,2 @@
+Add this as the child of a Control node. Then on hover of that, it will apply the set tween.
+This is useful for making buttons change size/etc on hovering. 

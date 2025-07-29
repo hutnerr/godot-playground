@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bfd8guddl0ba2"]
+
+[node name="Random" type="Node"]
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "You made it!"
+horizontal_alignment = 1
+vertical_alignment = 1
