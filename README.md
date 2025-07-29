@@ -29,3 +29,6 @@ There are many things I want to tackle and research. Below contains a list of so
 **Systems**
 - [ ] Saving & Loading Games
 - [ ] Inventory
+
+## Links
+- [Project Reflection](https://www.hunter-baker.com/pages/projects/godotplayground.html)
