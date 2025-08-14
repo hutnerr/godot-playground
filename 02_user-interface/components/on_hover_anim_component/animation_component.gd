@@ -23,6 +23,9 @@ func setup() -> void:
 	defaultScale = target.scale
 
 func onHover() -> void:
+	if target is Button and target.disabled:
+		return
+	
 	addTween("scale", hoverScale, time)
 	
 func offHover() -> void:
@@ -31,4 +34,5 @@ func offHover() -> void:
 func addTween(property: String, value, seconds: float) -> void:
 	if is_inside_tree():
 		var tween = get_tree().create_tween()
+		tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 		tween.tween_property(target, property, value, seconds).set_trans(transitionType)

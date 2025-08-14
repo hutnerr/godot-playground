@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3jwy357v8w0s"]
+[gd_scene load_steps=7 format=3 uid="uid://d3jwy357v8w0s"]
 
 [ext_resource type="Script" uid="uid://ciafrsbbbok0b" path="res://02_user-interface/ui_test_enviornment.gd" id="1_avvdj"]
 [ext_resource type="Theme" uid="uid://dt7suyjdcmrxn" path="res://02_user-interface/themes/learning.tres" id="2_fws1m"]
 [ext_resource type="Script" uid="uid://c0icoae7nwgit" path="res://02_user-interface/components/on_hover_anim_component/animation_component.gd" id="3_pfwvj"]
+[ext_resource type="Script" uid="uid://c80oqhpnrfq82" path="res://02_user-interface/components/button_sfx_component/button_sfx_component.gd" id="4_fws1m"]
 [ext_resource type="PackedScene" uid="uid://dqb1uykwba3vg" path="res://02_user-interface/elements/volume_sliders/VolumeSlider.tscn" id="4_rdirr"]
 [ext_resource type="Script" uid="uid://h18q2sstikjf" path="res://02_user-interface/elements/volume_sliders/volume_slider.gd" id="5_aqst2"]
 
@@ -38,11 +39,20 @@ text = "Test Scene Transition Singleton"
 script = ExtResource("3_pfwvj")
 metadata/_custom_type_script = "uid://c0icoae7nwgit"
 
+[node name="ButtonSFXComponent" type="Node" parent="UI/UIBaseMarginContainer/HBoxContainer/VBoxContainer/ChangeScene"]
+script = ExtResource("4_fws1m")
+metadata/_custom_type_script = "uid://c80oqhpnrfq82"
+
 [node name="ThemeTestButton" type="Button" parent="UI/UIBaseMarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 theme_type_variation = &"CustomIDButton"
+disabled = true
 text = "CustomIDButton"
+
+[node name="ButtonSFXComponent" type="Node" parent="UI/UIBaseMarginContainer/HBoxContainer/VBoxContainer/ThemeTestButton"]
+script = ExtResource("4_fws1m")
+metadata/_custom_type_script = "uid://c80oqhpnrfq82"
 
 [node name="Panel" type="Panel" parent="UI/UIBaseMarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(50, 100)

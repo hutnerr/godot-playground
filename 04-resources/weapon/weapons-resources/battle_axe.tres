@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=3 format=3 uid="uid://dgiq1ca1q421j"]
+
+[ext_resource type="Script" uid="uid://drxugp800whom" path="res://04-resources/weapon/weapons-resources/weapon_res.gd" id="1_f8duj"]
+[ext_resource type="Texture2D" uid="uid://dk3k76oovhdvb" path="res://99-assets/weapons/axe.png" id="2_k45fr"]
+
+[resource]
+script = ExtResource("1_f8duj")
+weaponName = "Battle Axe"
+damage = 100
+swingSpeed = 1.5
+weaponClass = 1
+weaponIcon = ExtResource("2_k45fr")
+metadata/_custom_type_script = "uid://drxugp800whom"

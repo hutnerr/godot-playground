@@ -1,1 +1,0 @@
-1. try and create a parallax background component with a svg export 
