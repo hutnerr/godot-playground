@@ -18,14 +18,14 @@ Below are some features that were created to better enable the idea of the playg
 There are many things I want to tackle and research. Below contains a list of some of the things I've looked at as well as some of the things I plan to look into. 
 
 **Core**
-- [ ] Composition
-- [ ] Custom Resources
-- [ ] State Machines
+- [X] Composition
+- [X] Custom Resources
+- [X] State Machines
 
 **Visuals**
 - [ ] Shaders
 - [ ] Particle Systems
-- [ ] User Interfaces
+- [X] User Interfaces
 - [ ] Animations
 
 **Systems**
