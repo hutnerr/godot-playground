@@ -1,3 +1,5 @@
+This project is currently on hold until I complete college. I intend to do a full rewrite when I'm done and switch the language from GDScript to C#.
+
 ## Overview
 This is a place for me to experiment, learn, and create modular Godot solutions in isolation. The idea is:
 1. Select a topic to research and learn about
