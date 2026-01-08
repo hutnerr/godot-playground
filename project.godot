@@ -12,7 +12,7 @@ config_version=5
 
 config/name="sandbox"
 run/main_scene="uid://ro3rwaj1mvfn"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://99-assets/svg-icons/icon.svg"
 
 [audio]
