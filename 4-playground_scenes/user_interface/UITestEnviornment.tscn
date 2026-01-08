@@ -1,0 +1,105 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3jwy357v8w0s"]
+
+[ext_resource type="Script" uid="uid://ciafrsbbbok0b" path="res://4-playground_scenes/user_interface/ui_test_enviornment.gd" id="1_avvdj"]
+[ext_resource type="Theme" uid="uid://cwwkk3kpedi4j" path="res://2-toolbox/user_interface/themes/gruvbox_theme.tres" id="2_fws1m"]
+[ext_resource type="Script" uid="uid://wtkip6i1f07w" path="res://2-toolbox/user_interface/components/control_hover_anim_component.gd" id="3_pfwvj"]
+[ext_resource type="Script" uid="uid://bei2cvpc8wqtr" path="res://2-toolbox/user_interface/components/btn_sfx_component.gd" id="4_fws1m"]
+[ext_resource type="PackedScene" uid="uid://dqb1uykwba3vg" path="res://2-toolbox/user_interface/volume_slider/VolumeSlider.tscn" id="4_rdirr"]
+[ext_resource type="Script" uid="uid://uf2n51uws82" path="res://2-toolbox/user_interface/volume_slider/volume_slider.gd" id="5_aqst2"]
+
+[node name="TestEnviornment" type="Node2D"]
+script = ExtResource("1_avvdj")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="UIBaseMarginContainer" type="MarginContainer" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_fws1m")
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/UIBaseMarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/UIBaseMarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ChangeScene" type="Button" parent="UI/UIBaseMarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+text = "Test Scene Transition Singleton"
+
+[node name="OnHoverAnimComponent" type="Node" parent="UI/UIBaseMarginContainer/HBoxContainer/VBoxContainer/ChangeScene"]
+script = ExtResource("3_pfwvj")
+
+[node name="ButtonSFXComponent" type="Node" parent="UI/UIBaseMarginContainer/HBoxContainer/VBoxContainer/ChangeScene"]
+script = ExtResource("4_fws1m")
+
+[node name="ThemeTestButton" type="Button" parent="UI/UIBaseMarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_type_variation = &"CustomIDButton"
+disabled = true
+text = "CustomIDButton"
+
+[node name="ButtonSFXComponent" type="Node" parent="UI/UIBaseMarginContainer/HBoxContainer/VBoxContainer/ThemeTestButton"]
+script = ExtResource("4_fws1m")
+
+[node name="Panel" type="Panel" parent="UI/UIBaseMarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(50, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_fws1m")
+
+[node name="Panel" type="PanelContainer" parent="UI/UIBaseMarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/UIBaseMarginContainer/HBoxContainer/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_right = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/UIBaseMarginContainer/HBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="MasterVolumeLabel" type="Label" parent="UI/UIBaseMarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Master Volume"
+
+[node name="MasterVolumeSlider" parent="UI/UIBaseMarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer" instance=ExtResource("4_rdirr")]
+layout_mode = 2
+busName = "Master"
+
+[node name="MusicVolLabel" type="Label" parent="UI/UIBaseMarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Music Volume"
+
+[node name="MusicVolSlider" type="HSlider" parent="UI/UIBaseMarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("5_aqst2")
+busName = "music"
+
+[node name="SFXVolLabel" type="Label" parent="UI/UIBaseMarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "SFX Volume"
+
+[node name="SFXVolSlider" type="HSlider" parent="UI/UIBaseMarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+script = ExtResource("5_aqst2")
+busName = "sfx"
+
+[node name="Spacing" type="Control" parent="UI/UIBaseMarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3

@@ -1,0 +1,3 @@
+The Toolbox is where the modular components exist. These are things that I can move into any of my games and they would work.
+
+Some of them are not 100% modular and rely on a Manager global (such as certain SFX components, etc.)

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dc2p4eljineyp"]
+
+[ext_resource type="Script" uid="uid://dg8xblacn2p7w" path="res://3-examples/resources/inventory/item/item.gd" id="1_7epsa"]
+[ext_resource type="Texture2D" uid="uid://bjbtsrcy78su1" path="res://0-assets/icons/dagger.png" id="1_qs8a1"]
+
+[resource]
+script = ExtResource("1_7epsa")
+name = "Dagger"
+icon = ExtResource("1_qs8a1")
+rarity = 1
+metadata/_custom_type_script = "uid://dg8xblacn2p7w"

@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmowaplx4bh7c"]
-
-[ext_resource type="Script" uid="uid://c80oqhpnrfq82" path="res://02_user-interface/components/button_sfx_component/button_sfx_component.gd" id="1_n5iww"]
-
-[node name="ButtonSfxComponent" type="Node"]
-script = ExtResource("1_n5iww")

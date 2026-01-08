@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://ro3rwaj1mvfn"]
+
+[ext_resource type="Script" uid="uid://c426jp54pxib7" path="res://1-playground_core/main.gd" id="1_2iq70"]
+[ext_resource type="PackedScene" uid="uid://dcou2vpu7ql66" path="res://1-playground_core/ui/debug_window/DebugWindow.tscn" id="1_cpbut"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_2iq70")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.156863, 0.156863, 0.156863, 1)
+
+[node name="CoreUI" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CoreUI"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+
+[node name="DebugWindow" parent="CoreUI/MarginContainer" instance=ExtResource("1_cpbut")]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 128
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="BtnGridContainer" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16

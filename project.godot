@@ -13,16 +13,21 @@ config_version=5
 config/name="sandbox"
 run/main_scene="uid://ro3rwaj1mvfn"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://99-assets/svg-icons/icon.svg"
+config/icon="res://0-assets/svg/icon.svg"
 
 [audio]
 
-buses/default_bus_layout="res://02_user-interface/elements/volume_sliders/default_bus_layout.tres"
+buses/default_bus_layout="res://2-toolbox/user_interface/volume_slider/default_bus_layout.tres"
 
 [autoload]
 
-SystemMonitor="*res://01_core/singletons/system_monitor.gd"
-SceneTransition="*res://02_user-interface/singletons/scene_transition/SceneTransition.tscn"
+SystemMonitor="*res://1-playground_core/globals/system_monitor.gd"
+Clogger="*res://2-toolbox/globals/clogger.gd"
+SceneTransitioner="*res://2-toolbox/globals/scene_transitioner/SceneTransitioner.tscn"
+DataBus="*res://2-toolbox/globals/data_bus.gd"
+GameEvents="*res://2-toolbox/globals/game_events.gd"
+AudioManager="*res://2-toolbox/globals/audio_manager/AudioManager.tscn"
+SettingsManager="*res://2-toolbox/globals/settings_manager.gd"
 
 [display]
 
@@ -31,13 +36,29 @@ window/size/viewport_height=576
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[dotnet]
+
+project/assembly_name="sandbox"
+
 [editor_plugins]
 
 enabled=PackedStringArray()
 
+[file_customization]
+
+folder_colors={
+"res://0-assets/": "red",
+"res://1-playground_core/": "orange",
+"res://2-toolbox/": "yellow",
+"res://3-examples/": "green",
+"res://4-playground_scenes/": "teal",
+"res://5-lab/": "blue"
+}
+
 [gui]
 
 theme/default_font_multichannel_signed_distance_field=true
+theme/custom="uid://cwwkk3kpedi4j"
 
 [input]
 
