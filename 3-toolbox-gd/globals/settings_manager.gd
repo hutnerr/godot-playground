@@ -2,7 +2,7 @@ extends Node
 
 signal mainMenuRequested
 
-const SETTINGS_MENU_SCENE = preload("res://2-toolbox/user_interface/simple_settings_menu/SimpleSettingsMenu.tscn")
+const SETTINGS_MENU_SCENE = preload("res://3-toolbox-gd/user_interface/simple_settings_menu/SimpleSettingsMenu.tscn")
 
 var settingsMenuInstance: CanvasLayer = null
 
