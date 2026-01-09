@@ -17,17 +17,17 @@ config/icon="res://0-assets/svg/icon.svg"
 
 [audio]
 
-buses/default_bus_layout="res://2-toolbox/user_interface/volume_slider/default_bus_layout.tres"
+buses/default_bus_layout="res://3-toolbox-gd/user_interface/volume_slider/default_bus_layout.tres"
 
 [autoload]
 
 SystemMonitor="*res://1-playground_core/globals/system_monitor.gd"
-SceneTransitioner="*res://2-toolbox/globals/scene_transitioner/SceneTransitioner.tscn"
-DataBus="*res://2-toolbox/globals/data_bus.gd"
-GameEvents="*res://2-toolbox/globals/game_events.gd"
-AudioManager="*res://2-toolbox/globals/audio_manager/AudioManager.tscn"
-SettingsManager="*res://2-toolbox/globals/settings_manager.gd"
-Clogger="*res://2-toolbox/globals/clogger/Clogger.tscn"
+SceneTransitioner="*res://3-toolbox-gd/globals/scene_transitioner/SceneTransitioner.tscn"
+DataBus="*res://3-toolbox-gd/globals/data_bus.gd"
+GameEvents="*res://3-toolbox-gd/globals/game_events.gd"
+AudioManager="*res://3-toolbox-gd/globals/audio_manager/AudioManager.tscn"
+SettingsManager="*res://3-toolbox-gd/globals/settings_manager.gd"
+Clogger="*res://3-toolbox-sharp/globals/Clogger.tscn"
 
 [display]
 
@@ -50,9 +50,11 @@ folder_colors={
 "res://0-assets/": "red",
 "res://1-playground_core/": "orange",
 "res://2-toolbox/": "yellow",
-"res://3-examples/": "green",
-"res://4-playground_scenes/": "teal",
-"res://5-lab/": "blue"
+"res://3-toolbox-gd/": "green",
+"res://3-toolbox-sharp/": "teal",
+"res://4-playground_scenes/": "blue",
+"res://5-examples/": "purple",
+"res://6-lab/": "pink"
 }
 
 [gui]

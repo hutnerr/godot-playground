@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://n73fxecaiagu"]
+
+[ext_resource type="Script" uid="uid://bqyrd71v7vhk4" path="res://3-toolbox-gd/game_logic/state_machines/state_machine.gd" id="1_fifyb"]
+
+[node name="StateMachine" type="Node"]
+script = ExtResource("1_fifyb")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://d0w8i5lmgtrrl"]
+
+[ext_resource type="Texture2D" uid="uid://3nbtsypi1kkj" path="res://0-assets/svg/two-coins.svg" id="1_h3obc"]
+[ext_resource type="Script" uid="uid://dg8xblacn2p7w" path="res://5-examples/resources/inventory/item/item.gd" id="2_2rvht"]
+
+[resource]
+script = ExtResource("2_2rvht")
+name = "Coins"
+icon = ExtResource("1_h3obc")
+rarity = 0
+metadata/_custom_type_script = "uid://dg8xblacn2p7w"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://ds2wgfpu0fgj6"]
+
+[ext_resource type="Script" uid="uid://dg8xblacn2p7w" path="res://5-examples/resources/inventory/item/item.gd" id="1_d18jl"]
+[ext_resource type="Resource" uid="uid://d0w8i5lmgtrrl" path="res://5-examples/resources/inventory/item/coins.tres" id="2_y7wj0"]
+[ext_resource type="Resource" uid="uid://dc2p4eljineyp" path="res://5-examples/resources/inventory/item/dagger.tres" id="3_7xqe8"]
+[ext_resource type="Script" uid="uid://bjmbwcda6xohm" path="res://5-examples/resources/inventory/recipe/recipe.gd" id="4_l44sh"]
+
+[resource]
+script = ExtResource("4_l44sh")
+name = "Make Dagger"
+ingredients = Array[ExtResource("1_d18jl")]([ExtResource("2_y7wj0"), ExtResource("2_y7wj0"), ExtResource("2_y7wj0")])
+quantities = Array[int]([2, 2, 2])
+result = ExtResource("3_7xqe8")
+metadata/_custom_type_script = "uid://bjmbwcda6xohm"

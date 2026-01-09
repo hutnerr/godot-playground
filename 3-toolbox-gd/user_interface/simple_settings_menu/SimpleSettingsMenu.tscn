@@ -1,0 +1,177 @@
+[gd_scene load_steps=7 format=3 uid="uid://dufb3o6i21t47"]
+
+[ext_resource type="Theme" uid="uid://cwwkk3kpedi4j" path="res://2-toolbox/themes/gruvbox_theme.tres" id="1_l7oxm"]
+[ext_resource type="Script" uid="uid://bhi5vi1yni2i5" path="res://3-toolbox-gd/user_interface/simple_settings_menu/simple_settings_menu.gd" id="2_3ci6f"]
+[ext_resource type="Script" uid="uid://uf2n51uws82" path="res://3-toolbox-gd/user_interface/volume_slider/volume_slider.gd" id="3_udmrq"]
+[ext_resource type="Script" uid="uid://wtkip6i1f07w" path="res://3-toolbox-gd/user_interface/components/control_hover_anim_component.gd" id="4_6s0jj"]
+[ext_resource type="Script" uid="uid://bei2cvpc8wqtr" path="res://3-toolbox-gd/user_interface/components/btn_sfx_component.gd" id="5_we76e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5nxtp"]
+bg_color = Color(0.133333, 0.137255, 0.137255, 0.666667)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+process_mode = 3
+layer = 2
+
+[node name="SettingsMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l7oxm")
+script = ExtResource("2_3ci6f")
+
+[node name="CoveragePanel" type="Panel" parent="SettingsMenu"]
+layout_mode = 0
+offset_left = -850.0
+offset_top = -531.0
+offset_right = 858.0
+offset_bottom = 516.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5nxtp")
+
+[node name="PanelContainer" type="PanelContainer" parent="SettingsMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -148.0
+offset_top = -118.0
+offset_right = 148.0
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsMenu/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="MainContainer" type="VBoxContainer" parent="SettingsMenu/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="SettingsLabel" type="Label" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer"]
+layout_mode = 2
+theme_type_variation = &"LabelHeader"
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+
+[node name="VolumeContainer" type="VBoxContainer" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer"]
+layout_mode = 2
+
+[node name="VolumeTitleLabel" type="Label" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer/VolumeContainer"]
+layout_mode = 2
+text = "Volume"
+horizontal_alignment = 1
+
+[node name="MasterHBox" type="HBoxContainer" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer/VolumeContainer"]
+layout_mode = 2
+
+[node name="MasterLabel" type="Label" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer/VolumeContainer/MasterHBox"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Master	"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MasterVolSldr" type="HSlider" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer/VolumeContainer/MasterHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.5
+script = ExtResource("3_udmrq")
+busName = "Master"
+
+[node name="MusicHBox" type="HBoxContainer" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer/VolumeContainer"]
+layout_mode = 2
+
+[node name="MusicLabel" type="Label" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer/VolumeContainer/MusicHBox"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Music"
+
+[node name="MusicVolSldr" type="HSlider" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer/VolumeContainer/MusicHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.5
+script = ExtResource("3_udmrq")
+busName = "music"
+
+[node name="SFXHBox" type="HBoxContainer" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer/VolumeContainer"]
+layout_mode = 2
+
+[node name="SFXLabel" type="Label" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer/VolumeContainer/SFXHBox"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "SFX		"
+
+[node name="SFXVolSldr" type="HSlider" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer/VolumeContainer/SFXHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.5
+script = ExtResource("3_udmrq")
+busName = "sfx"
+
+[node name="Spacer2" type="Control" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+
+[node name="MainMenuButton" type="Button" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer"]
+layout_mode = 2
+text = "Main Menu"
+
+[node name="OnHoverAnimComponent" type="Node" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer/MainMenuButton"]
+script = ExtResource("4_6s0jj")
+hoverScale = Vector2(1.05, 1.05)
+metadata/_custom_type_script = "uid://wtkip6i1f07w"
+
+[node name="SFXComponent" type="Node" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer/MainMenuButton"]
+script = ExtResource("5_we76e")
+metadata/_custom_type_script = "uid://bei2cvpc8wqtr"
+
+[node name="Spacer3" type="Control" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer"]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+
+[node name="QuitButton" type="Button" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer"]
+layout_mode = 2
+text = "Quit Game"
+
+[node name="OnHoverAnimComponent" type="Node" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer/QuitButton"]
+script = ExtResource("4_6s0jj")
+hoverScale = Vector2(1.05, 1.05)
+metadata/_custom_type_script = "uid://wtkip6i1f07w"
+
+[node name="SFXComponent" type="Node" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer/QuitButton"]
+script = ExtResource("5_we76e")
+metadata/_custom_type_script = "uid://bei2cvpc8wqtr"
+
+[node name="Spacer4" type="Control" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer"]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer"]
+layout_mode = 2
+text = "Close"
+
+[node name="OnHoverAnimComponent" type="Node" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer/CloseButton"]
+script = ExtResource("4_6s0jj")
+hoverScale = Vector2(1.05, 1.05)
+metadata/_custom_type_script = "uid://wtkip6i1f07w"
+
+[node name="SFXComponent" type="Node" parent="SettingsMenu/PanelContainer/MarginContainer/MainContainer/CloseButton"]
+script = ExtResource("5_we76e")
+metadata/_custom_type_script = "uid://bei2cvpc8wqtr"

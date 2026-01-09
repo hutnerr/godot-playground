@@ -1,3 +1,5 @@
 The Toolbox is where the modular components exist. These are things that I can move into any of my games and they would work.
 
 Some of them are not 100% modular and rely on a Manager global (such as certain SFX components, etc.)
+
+Alongside this, there exists a toolbox-gd, and a toolbox-sharp, where code specifically for those languages exist. This toolbox folder is a more general one for things like resources and other things that don't  belong to a specific language. 

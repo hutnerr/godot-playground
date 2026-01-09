@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqb1uykwba3vg"]
-
-[ext_resource type="Script" uid="uid://uf2n51uws82" path="res://2-toolbox/user_interface/volume_slider/volume_slider.gd" id="1_umtbl"]
-
-[node name="VolumeSlider" type="HSlider"]
-max_value = 1.0
-step = 0.001
-script = ExtResource("1_umtbl")

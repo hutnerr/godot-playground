@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbal4w2x66e4v"]
-
-[ext_resource type="Script" uid="uid://btq2wyk6xgfba" path="res://2-toolbox/globals/clogger/Clogger.cs" id="1_brxcr"]
-
-[node name="Clogger" type="Node"]
-script = ExtResource("1_brxcr")

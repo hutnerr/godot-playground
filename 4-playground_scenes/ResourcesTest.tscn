@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dh67u3wefxrgl"]
 
-[ext_resource type="PackedScene" uid="uid://8fjs8kem0v5v" path="res://3-examples/resources/weapon/Weapon.tscn" id="1_885kd"]
-[ext_resource type="Resource" uid="uid://dgiq1ca1q421j" path="res://3-examples/resources/weapon/weapons-resources/battle_axe.tres" id="2_jboyy"]
-[ext_resource type="Resource" uid="uid://nq3lhg6u4soe" path="res://3-examples/resources/weapon/weapons-resources/dagger.tres" id="3_j631c"]
+[ext_resource type="PackedScene" uid="uid://8fjs8kem0v5v" path="res://5-examples/resources/weapon/Weapon.tscn" id="1_885kd"]
+[ext_resource type="Resource" uid="uid://dgiq1ca1q421j" path="res://5-examples/resources/weapon/weapons-resources/battle_axe.tres" id="2_jboyy"]
+[ext_resource type="Resource" uid="uid://nq3lhg6u4soe" path="res://5-examples/resources/weapon/weapons-resources/dagger.tres" id="3_j631c"]
 
 [node name="ResourcesTest" type="Node2D"]
 

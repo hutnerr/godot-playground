@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=3 format=3 uid="uid://nq3lhg6u4soe"]
+
+[ext_resource type="Script" uid="uid://drxugp800whom" path="res://5-examples/resources/weapon/weapons-resources/weapon_res.gd" id="1_5kgeo"]
+[ext_resource type="Texture2D" uid="uid://bjbtsrcy78su1" path="res://0-assets/icons/dagger.png" id="2_iljkj"]
+
+[resource]
+script = ExtResource("1_5kgeo")
+weaponName = "Dagger"
+damage = 25
+swingSpeed = 5.0
+weaponClass = 0
+weaponIcon = ExtResource("2_iljkj")
+metadata/_custom_type_script = "uid://drxugp800whom"

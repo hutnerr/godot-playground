@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://d3jwy357v8w0s"]
 
 [ext_resource type="Script" uid="uid://ciafrsbbbok0b" path="res://4-playground_scenes/user_interface/ui_test_enviornment.gd" id="1_avvdj"]
-[ext_resource type="Theme" uid="uid://cwwkk3kpedi4j" path="res://2-toolbox/user_interface/themes/gruvbox_theme.tres" id="2_fws1m"]
-[ext_resource type="Script" uid="uid://wtkip6i1f07w" path="res://2-toolbox/user_interface/components/control_hover_anim_component.gd" id="3_pfwvj"]
-[ext_resource type="Script" uid="uid://bei2cvpc8wqtr" path="res://2-toolbox/user_interface/components/btn_sfx_component.gd" id="4_fws1m"]
-[ext_resource type="PackedScene" uid="uid://dqb1uykwba3vg" path="res://2-toolbox/user_interface/volume_slider/VolumeSlider.tscn" id="4_rdirr"]
-[ext_resource type="Script" uid="uid://uf2n51uws82" path="res://2-toolbox/user_interface/volume_slider/volume_slider.gd" id="5_aqst2"]
+[ext_resource type="Theme" uid="uid://cwwkk3kpedi4j" path="res://2-toolbox/themes/gruvbox_theme.tres" id="2_fws1m"]
+[ext_resource type="Script" uid="uid://wtkip6i1f07w" path="res://3-toolbox-gd/user_interface/components/control_hover_anim_component.gd" id="3_pfwvj"]
+[ext_resource type="Script" uid="uid://bei2cvpc8wqtr" path="res://3-toolbox-gd/user_interface/components/btn_sfx_component.gd" id="4_fws1m"]
+[ext_resource type="PackedScene" uid="uid://dqb1uykwba3vg" path="res://3-toolbox-gd/user_interface/volume_slider/VolumeSlider.tscn" id="4_rdirr"]
+[ext_resource type="Script" uid="uid://uf2n51uws82" path="res://3-toolbox-gd/user_interface/volume_slider/volume_slider.gd" id="5_aqst2"]
 
 [node name="TestEnviornment" type="Node2D"]
 script = ExtResource("1_avvdj")
