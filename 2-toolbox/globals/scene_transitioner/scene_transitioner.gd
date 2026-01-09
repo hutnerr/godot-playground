@@ -24,7 +24,7 @@ func changeScene(target: String, transition: TransitionType = TransitionType.DIS
 		return
 	
 	_isTransitioning = true
-	Clogger.info("Started changing scene...")
+	# Clogger.info("Started changing scene...")
 	
 	await _playTransition(transition)
 	
@@ -56,7 +56,7 @@ func changeSceneToPacked(packedScene: PackedScene, transition: TransitionType = 
 		return
 	
 	_isTransitioning = true
-	Clogger.info("Started changing scene (packed)...")
+	# Clogger.info("Started changing scene (packed)...")
 	
 	await _playTransition(transition)
 	
@@ -69,7 +69,7 @@ func changeSceneToPacked(packedScene: PackedScene, transition: TransitionType = 
 	await _playTransitionReverse(transition)
 	
 	sceneChanged.emit()
-	Clogger.info("Changed to packed scene")
+	Clogger.info("Changed scene to packed scene: %s" % packedScene)
 	_isTransitioning = false
 
 

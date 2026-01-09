@@ -25,16 +25,12 @@ func openMenu() -> void:
 	if settingsMenuInstance:
 		return
 	
-	Clogger.info("Opening settings menu...")
 	settingsMenuInstance = SETTINGS_MENU_SCENE.instantiate()
 	get_tree().root.add_child(settingsMenuInstance)
 	
-	# Get the Control child and connect its signals
 	var menuControl = settingsMenuInstance.get_child(0)
-	Clogger.info("Menu control found: " + str(menuControl))
 	menuControl.mainMenuButtonRequest.connect(_onMainMenuRequested)
 	menuControl.closeRequested.connect(closeMenu)
-	Clogger.info("Signals connected")
 	
 	get_tree().paused = true
 	AudioManager.playSFX(menuControl.hoverSFX)
@@ -44,7 +40,6 @@ func closeMenu() -> void:
 	if not settingsMenuInstance:
 		return
 	
-	Clogger.info("Closing settings menu...")
 	get_tree().paused = false
 	settingsMenuInstance.queue_free()
 	settingsMenuInstance = null

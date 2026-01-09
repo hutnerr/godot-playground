@@ -10,9 +10,9 @@ config_version=5
 
 [application]
 
-config/name="sandbox"
+config/name="playground"
 run/main_scene="uid://ro3rwaj1mvfn"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://0-assets/svg/icon.svg"
 
 [audio]
@@ -22,12 +22,12 @@ buses/default_bus_layout="res://2-toolbox/user_interface/volume_slider/default_b
 [autoload]
 
 SystemMonitor="*res://1-playground_core/globals/system_monitor.gd"
-Clogger="*res://2-toolbox/globals/clogger.gd"
 SceneTransitioner="*res://2-toolbox/globals/scene_transitioner/SceneTransitioner.tscn"
 DataBus="*res://2-toolbox/globals/data_bus.gd"
 GameEvents="*res://2-toolbox/globals/game_events.gd"
 AudioManager="*res://2-toolbox/globals/audio_manager/AudioManager.tscn"
 SettingsManager="*res://2-toolbox/globals/settings_manager.gd"
+Clogger="*res://2-toolbox/globals/clogger/Clogger.tscn"
 
 [display]
 

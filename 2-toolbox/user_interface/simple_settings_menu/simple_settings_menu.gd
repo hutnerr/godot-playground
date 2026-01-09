@@ -16,15 +16,11 @@ var pressedSFX = preload("res://0-assets/sfx/button/pressed.ogg")
 const MAIN_PATH = "res://1-playground_core/Main.tscn"
 
 func _ready() -> void:
-	Clogger.info("SimpleSettingsMenu _ready() called")
 	updateButtonVisibility()
-	
 	mainMenuButton.pressed.connect(_onMainMenuButtonPressed)
 	quitButton.pressed.connect(_onQuitButtonPressed)
 	closeSettingsButton.pressed.connect(_onCloseSettingsButtonPressed)
 	
-	Clogger.info("Button connections established")
-
 func updateButtonVisibility() -> void:
 	var isMainMenu = get_tree().current_scene.scene_file_path == MAIN_PATH
 	
@@ -34,16 +30,12 @@ func updateButtonVisibility() -> void:
 	quitButtonSpacer.visible = not isMainMenu
 
 func _onMainMenuButtonPressed() -> void:
-	Clogger.info("Main Menu button pressed!")
 	mainMenuButtonRequest.emit()
 	SceneTransitioner.changeScene(MAIN_PATH)
 	# AudioManager.playMusic(AudioManager.Music.MENU)
-	Clogger.action("Going to Main Menu from Settings")
 
 func _onQuitButtonPressed() -> void:
-	Clogger.info("Quit button pressed!")
 	get_tree().quit()
 
 func _onCloseSettingsButtonPressed() -> void:
-	Clogger.info("Close button pressed!")
 	closeRequested.emit()

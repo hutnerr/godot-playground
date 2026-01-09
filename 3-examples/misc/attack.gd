@@ -1,4 +1,6 @@
-class_name Attack extends Node
+extends Node
+
+# class_name Attack 
 
 var attackDamage: float = 10.0
 var knockback: float = 100.0

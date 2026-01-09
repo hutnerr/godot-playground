@@ -1,5 +1,3 @@
-This project is currently on hold until I complete college. I intend to do a full rewrite when I'm done and switch the language from GDScript to C#.
-
 ## Overview
 This is a place for me to experiment, learn, and create modular Godot solutions in isolation. The idea is:
 1. Select a topic to research and learn about
@@ -7,18 +5,11 @@ This is a place for me to experiment, learn, and create modular Godot solutions 
 3. Review and polish it until I'm happy with it
 4. Add it to my Godot toolbox
 
-## Playground Features
-Below are some features that were created to better enable the idea of the playground and facilitate the experiements.
-
-1. Developer Terminal which allows for specifiying a command set. Useful to prevent clutter and specified commands based on current work. 
-2. Performance testing scripts.
-3. Debug window with relevant statistics such as FPS.
-
 ## Concepts
 There are many things I want to tackle and research. Below contains a list of some of the things I've looked at as well as some of the things I plan to look into. 
 
 **Core**
-- [X] Composition
+- [x] Composition
 - [X] Custom Resources
 - [X] State Machines
 
@@ -31,3 +22,12 @@ There are many things I want to tackle and research. Below contains a list of so
 **Systems**
 - [ ] Saving & Loading Games
 - [ ] Inventory
+- [ ] Dialogue System
+- [ ] RNG Manager
+- [ ] Camera Controller
+- [ ] Player Controller
+
+**Specific Components**
+- [ ] Health Component
+- [ ] Hitbox Component
+- [ ] Hurtbox Component
