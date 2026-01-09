@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://ja6dc07tsru5"]
+
+[ext_resource type="Script" uid="uid://b17dvpnp1vv7y" path="res://4-playground_scenes/simple_components/SimpleComponents.cs" id="1_op7ld"]
+[ext_resource type="Script" uid="uid://cgvene4yw65c3" path="res://6-lab/HealthComponent.cs" id="2_lnpbd"]
+
+[node name="SimpleComponents" type="Node2D"]
+script = ExtResource("1_op7ld")
+
+[node name="HealthComponent" type="Node" parent="."]
+script = ExtResource("2_lnpbd")
+metadata/_custom_type_script = "uid://cgvene4yw65c3"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthLabel" type="Label" parent="CanvasLayer"]
+offset_left = 281.0
+offset_top = 125.0
+offset_right = 653.0
+offset_bottom = 207.0
+text = "LABEL PLACEHOLDER"
+
+[node name="HurtButton" type="Button" parent="CanvasLayer"]
+offset_left = 211.0
+offset_top = 268.0
+offset_right = 396.0
+offset_bottom = 343.0
+text = "Hurt"
+
+[node name="HealButton" type="Button" parent="CanvasLayer"]
+offset_left = 509.0
+offset_top = 269.0
+offset_right = 694.0
+offset_bottom = 344.0
+text = "Heal"

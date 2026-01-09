@@ -8,6 +8,7 @@ var playgroundScenes = [
 	"res://4-playground_scenes/user_interface/UITestEnviornment.tscn",
 	"res://4-playground_scenes/StateMachines.tscn",
 	"res://4-playground_scenes/ResourcesTest.tscn",
+	"res://4-playground_scenes/simple_components/SimpleComponents.tscn",
 ]
 
 func _ready() -> void:
