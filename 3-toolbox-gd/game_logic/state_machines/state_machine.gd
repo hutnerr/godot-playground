@@ -22,6 +22,7 @@ func setup(parent: Node) -> void:
 		states[state.stateName.to_lower()] = state # used for changing states
 	
 	changeState(initialState.stateName)
+	Clogger.log("state", "Initial state: " + initialState.stateName)
 
 
 func processInput(event: InputEvent) -> void:
