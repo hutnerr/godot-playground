@@ -27,7 +27,7 @@ DataBus="*res://3-toolbox-gd/globals/data_bus.gd"
 GameEvents="*res://3-toolbox-gd/globals/game_events.gd"
 AudioManager="*res://3-toolbox-gd/globals/audio_manager/AudioManager.tscn"
 SettingsManager="*res://3-toolbox-gd/globals/settings_manager.gd"
-Clogger="*res://3-toolbox-sharp/globals/Clogger.tscn"
+Clogger="*res://3-toolbox-sharp/globals/Clogger.cs"
 
 [display]
 

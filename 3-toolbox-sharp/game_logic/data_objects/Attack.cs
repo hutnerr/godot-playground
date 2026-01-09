@@ -7,14 +7,15 @@ namespace Toolbox.GameLogic;
 /// combat system of the game. 
 /// 
 /// The benefit of this structure is that you can have methods like
-/// body.TakeDamage(attack: Attack)
+/// <code>body.TakeDamage(attack: Attack)</code>
 /// instead of
-/// body.TakeDamage(damageAmount: float, isCritical: bool, ...)
+/// <code>body.TakeDamage(damageAmount: float, isCritical: bool, ...)</code>
 /// 
 /// If there are additional properties here, the reciever can only
 /// take out what they need and leave the rest alone. This makes
 /// it very easy to extend without breaking anything.
 /// 
+/// <code>
 /// var attack = new Attack
 /// {
 /// 	damage = calculatedDamage,
@@ -22,6 +23,7 @@ namespace Toolbox.GameLogic;
 /// 	knockback = 150.0f,
 /// }
 /// body.takeDamage(attack);
+/// </code>
 /// </summary>
 public partial class Attack
 {
